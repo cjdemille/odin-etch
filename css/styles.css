@@ -1,5 +1,6 @@
 body{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width:100vw;
@@ -8,9 +9,9 @@ body{
 
 main{
     display:grid; 
-    grid-template-columns: repeat(16, 1fr);
-    width:560px; 
-    height: 560px;
+    /* grid-template-columns: repeat(16, 1fr); */
+    width: 960px; 
+    height: 960px;
     border: 3px solid black;
 }
 
