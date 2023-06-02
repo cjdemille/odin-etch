@@ -1,3 +1,11 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100vw;
+    height:100vh;
+}
+
 main{
     display:grid; 
     grid-template-columns: repeat(16, 1fr);
@@ -10,5 +18,9 @@ main{
     height:1/16;
     width: 1/16;
     box-sizing: border-box;
-    border: 1px solid red; 
+}
+
+
+.filled{
+    background-color: aqua;
 }
