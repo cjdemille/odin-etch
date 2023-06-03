@@ -6,28 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>HTML Template</title>
+    <title>Etch-a-sketch</title>
     <meta name="author" content="C.J. DeMille">
-    <meta name="description" content="brief description">
+    <meta name="description" content="Relive your childhood memories by playing with a digital etch-a-sketch.">
 
     <!-- Open Graph Protocol -->
-    <!-- 
-    <meta property = "og:title" content ="Title">
-    <meta property = "og:type" content ="website">
-    <meta property = "og:image" content ="og-img.png"> 
-    <meta property = "og:url" content ="https://">
 
-    <meta property = "og:description" content ="brief description">
-    <meta property = "og:locale" content = "en_US">
-    <meta property = "og:site_name" content = "Site Name"> 
-    -->
+    <meta property="og:title" content="Etch-a-sketch">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://">
 
-    <!-- Icons -->
-    <!-- 
-    <link rel="icon" href = "/favicon.ico">
-    <link rel="icon" href = "/favicon.svg" type="image/svg+sml"> 
-    <link rel = "apple-touch-icon" href="/apple-touch-icon.png">
-    -->
+    <meta property="og:description" content="relive your childhood memories by playing with a digital etch-a-sketch.">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="Etch-a-sketch">
 
     <!-- Fonts -->
     <!-- Links to font files go here -->
@@ -38,18 +29,25 @@
 
 <body>
     <header>
-        Etch-a-sketch
+        <h1>Etch-a-sketch</h1>
     </header>
-
-    <button id='change-squares'>Change grid size</button>
+    <form class="controls">
+        <label>
+            How many squares per side?: <input type="number" id = "change-grid" name="grid-change"/> <button class="btn">resize grid</button>
+         </label>
+        <!-- <button id='change-squares'>Change grid size</button> -->
+        <input type="radio" id="black" name="color-style" value="black">
+        <label for="black">Black</label>
+        <input type="radio" id="rainbow" name="color-style" value="rainbow">
+        <label for="black">Rainbow</label>
+    </form>
 
     <main>
         <!-- Add main content here. -->
     </main>
     <footer>
-        <!-- Add copyright notices and other footer content here. -->
+        <p>This project was completed by C.J. DeMille as part of the Odin Project curriculum. </p>
     </footer>
-
 
     <!-- JavaScript files  -->
     <script src="js/app.js"></script>

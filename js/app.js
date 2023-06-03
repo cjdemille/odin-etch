@@ -1,9 +1,26 @@
 const main = document.querySelector('main');
-const changeGridSize = document.querySelector('#change-squares')
+const changeGridSize = document.querySelector('#change-squares');
+const btn = document.querySelector('.btn');
 
-function changeColor(e){
-    e.target.style.backgroundColor = "black";
+const changeColor = (e) =>{
+    if (document.getElementById('rainbow').checked){
+        const red = Math.floor(Math.random() * 255);
+        const green = Math.floor(Math.random() * 255);
+        const blue = Math.floor(Math.random() * 255);
+        e.target.style.backgroundColor = `rgb(${red} , ${green} , ${blue})`;
+    }else {
+        e.target.style.backgroundColor = 'black';
+    }
+    
 }
+
+// const changeColorRainbow = (e) => {
+//     const red = Math.floor(Math.random() * 255);
+//     const green = Math.floor(Math.random() * 255);
+//     const blue = Math.floor(Math.random() * 255);
+//     e.target.style.backgroundColor = `rgb(${red} , ${green} , ${blue})`;;
+// };
+
 
 const makeBoxes = (boxesPerSide) =>{
     numDivs = boxesPerSide * boxesPerSide
@@ -23,17 +40,16 @@ const removeBoxes = () =>{
 
 makeBoxes(16);
 
-changeGridSize.addEventListener('click', function(e){
-    let size = prompt('How many squares per side?');
-    size = Number(size);
-
-    if(size < 100){
-        removeBoxes();
-        makeBoxes(size);
-    } else{
-        alert("You need to pick a number less than 100");
-    };
-
+btn.addEventListener('click', function(e){
+    e.preventDefault();
+    const parent = e.target.closest('label');
+    const input = parent.querySelector('input');
+    const inputValue = input.value;
+    console.log(inputValue);
+    
+    removeBoxes();
+    makeBoxes(inputValue);
+   
 });
 
 
