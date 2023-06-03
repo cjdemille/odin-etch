@@ -38,14 +38,3 @@ main{
 form{
     margin:2rem auto;
 }
-
-.square{
-    height:1/16;
-    width: 1/16;
-    box-sizing: border-box;
-}
-
-
-.filled{
-    background-color: aqua;
-}
