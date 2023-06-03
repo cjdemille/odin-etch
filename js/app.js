@@ -1,6 +1,7 @@
 const main = document.querySelector('main');
-const changeGridSize = document.querySelector('#change-squares');
 const btn = document.querySelector('.btn');
+const clearBtn = document.querySelector('#clear');
+
 
 const changeColor = (e) =>{
     if (document.getElementById('rainbow').checked){
@@ -51,5 +52,9 @@ btn.addEventListener('click', function(e){
     makeBoxes(inputValue);
    
 });
+
+clearBtn.addEventListener('click', function(e){
+    removeBoxes();
+})
 
 
