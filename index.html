@@ -21,25 +21,28 @@
     <meta property="og:site_name" content="Etch-a-sketch">
 
     <!-- Fonts -->
-    <!-- Links to font files go here -->
+    <link rel="stylesheet" href="https://use.typekit.net/nai8plw.css">
 
     <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
     <header>
-        <h1>Etch-a-sketch</h1>
+        <h1>Etch-A-Sketch</h1>
     </header>
     <form class="controls">
         <label>
-            How many squares per side?: <input type="number" id = "change-grid" name="grid-change"/> <button class="btn">resize grid</button>
-         </label>
+            How many squares per side?: <input type="number" id="change-grid" name="grid-change" /> <button
+                class="btn">resize grid</button>
+        </label>
         <!-- <button id='change-squares'>Change grid size</button> -->
         <input type="radio" id="black" name="color-style" value="black">
         <label for="black">Black</label>
         <input type="radio" id="rainbow" name="color-style" value="rainbow">
         <label for="black">Rainbow</label>
+        <button id="clear" name = "clear"> Clear the Etch-A-Sketch</button>
     </form>
 
     <main>
